@@ -1,0 +1,20 @@
+Item
+- name
+- price
+- ItemType
+- isImported
+
+ItemType (enum)
+- books, food, medical products, perfume
+- isTaxExempted()
+
+LineItem
+- Item
+- quantity
+- getTax()
+    - to fix edge case of basic sales tax exempted but imported
+    - extract into tax calculator
+- getTotalPrice()
+
+Receipt
+- List<LineItem>
